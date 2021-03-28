@@ -2,8 +2,11 @@ const AWS = require("aws-sdk");
 const miscService = require("./miscService");
 const technologiesService = require("./technologiesService")
 
-AWS.config.loadFromPath('./cred.json');
-
+AWS.config.update({
+  region: "us-east-2",
+  accessKey: process.env.AWS_ACCESS_KEY,
+  secretAccessKey: process.env.AWS_SECRET_KEY
+});
 const DynamoDB = new AWS.DynamoDB();
 const docClient = new AWS.DynamoDB.DocumentClient();
 const PROJECTS_TABLE = "Projects";
