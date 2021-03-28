@@ -1,0 +1,23 @@
+{
+  "name": "irennalumbuun",
+  "version": "1.0.0",
+  "description": "This is the backend for my personal website",
+  "main": "server.js",
+  "scripts": {
+    "test": "test",
+    "start": "node server.js"
+  },
+  "author": "Irenna Lumbuun",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/animations": "^11.2.0",
+    "aws-sdk": "^2.815.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "masonry-layout": "^4.2.2",
+    "ngx-masonry": "^11.0.0",
+    "nodemon": "^2.0.7",
+    "uuid": "^8.3.2"
+  }
+}
