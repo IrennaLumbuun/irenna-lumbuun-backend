@@ -3,9 +3,7 @@ const miscService = require("./miscService");
 const technologiesService = require("./technologiesService")
 
 AWS.config.update({
-  region: "us-east-2",
-  accessKey: process.env.AWS_ACCESS_KEY,
-  secretAccessKey: process.env.AWS_SECRET_KEY
+  region: "us-east-2"
 });
 const DynamoDB = new AWS.DynamoDB();
 const docClient = new AWS.DynamoDB.DocumentClient();
