@@ -7,9 +7,13 @@ app.use(express.json());
 app.use(cors());
 
 // set up port =============================================
-const {PORT = 8080} = process.env;
+// Ideally, the port that the backend listens to should not be hardcoded like this. 
+// Instead, it should listen to process.env. 
+// Right now, it is hardcoded as a hacky solution to resolve SSL issue. 
+// For context, see https://github.com/IrennaLumbuun/irenna-lumbuun-backend/wiki/Unavailability-Tracker
+const PORT = 8081;
 app.get('/', (req, res) => res.send('Application is running..'));
-app.listen(PORT, () => console.log(`Backend app listening on port ${PORT}! Process.env = ${process.env.PORT}`));
+app.listen(PORT, () => console.log(`Backend app listening on port 8081! Process.env = ${process.env.PORT}`));
 
 
 // APIs -- Projects ==========================================
